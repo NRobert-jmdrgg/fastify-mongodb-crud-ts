@@ -1,0 +1,21 @@
+
+@URL = http://localhost:5000/accounts
+@ID = 5ca4bbc7a2dd94ee5816239c
+
+### GET ALL ACCOUNTS
+GET {{URL}} HTTP/1.1
+
+### GET ACCOUNT BY ID
+GET {{URL}}/{{ID}} HTTP/1.1
+
+### ADD ACCOUNT
+POST {{URL}} HTTP/1.1
+
+### DELETE ACCOUNT BY ID
+DELETE {{URL}}/{{ID}} HTTP/1.1
+
+### UPDATE ACCOUNT BY ID
+PUT {{URL}}/{{ID}} HTTP/1.1
+header name: header value
+
+content
