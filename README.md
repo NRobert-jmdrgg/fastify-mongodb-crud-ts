@@ -1,8 +1,8 @@
 
 ### .env -be:
 
-`PORT = 5001'
-'DB_URI = <mongodb_url>'
+`PORT = 5001`
+`DB_URI = <mongodb_url>`
 
 
 # Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
