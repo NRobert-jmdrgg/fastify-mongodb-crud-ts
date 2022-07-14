@@ -1,11 +1,9 @@
 
-.env -be:
+### .env -be:
 
-`
-PORT = 5001
+`PORT = 5001'
+'DB_URI = <mongodb_url>'
 
-DB_URI = <mongodb_url>
-`
 
 # Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
 This project was bootstrapped with Fastify-CLI.
