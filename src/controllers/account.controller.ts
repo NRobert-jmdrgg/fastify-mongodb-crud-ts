@@ -27,9 +27,11 @@ const deleteAccount = async (req: any, reply: FastifyReply) => {
 
 const updateAccount = async (req: any, reply: FastifyReply) => {
   try {
-    const account = await Account.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    const account = await Account.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      { new: true }
+    );
     reply.code(200).send(account);
   } catch (err) {
     reply.code(500).send(err);
