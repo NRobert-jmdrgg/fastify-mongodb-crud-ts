@@ -13,18 +13,16 @@ const getAccount = async (req: any, reply: FastifyReply) => {
 };
 
 const addAccount = async (req: any, reply: FastifyReply) => {
-  const newProduct = new req.body();
+  const newAccount = new Account(req.body);
 
-  console.log(newProduct);
+  await newAccount.save().then('Account saved');
 
-  await newProduct.save();
-
-  reply.code(201).send(newProduct);
+  reply.code(201).send(newAccount);
 };
 
 const deleteAccount = async (req: any, reply: FastifyReply) => {
   await Account.findByIdAndDelete(req.params.id);
-  reply.code(204).send(`account id: ${req.params.id} torolve`);
+  reply.code(201).send(`account id: ${req.params.id} torolve`);
 };
 
 const updateAccount = async (req: any, reply: FastifyReply) => {
